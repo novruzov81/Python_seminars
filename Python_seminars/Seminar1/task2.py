@@ -6,7 +6,7 @@
 # 100 -> 1 (1 + 0 + 0) |
 
 number = int(input("Введите трехзначное число:"))
-if number>99 or number<1000
-    print("Сумма цифр = ", number//100 + number//10%10 + number%100)
-else
+if number>99 and number<1000:
+    print("Сумма цифр = ", number//100 + number//10%10 + number%100%10)
+else:
     print("Вы ввели не трехзначное число")
