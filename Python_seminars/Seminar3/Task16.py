@@ -19,6 +19,6 @@ for i in range(count):
 print(spis)
 numbers = 0
 for i in range(len(spis)):
-    if i == num:
+    if spis[i] == num:
         numbers+=1
 print("Количество элементов", num, "=", numbers)
