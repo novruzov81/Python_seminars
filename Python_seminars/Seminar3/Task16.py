@@ -15,5 +15,10 @@ spis = list()
 count = int(input("Введите количество элементов: "))
 num = int(input("Введите искомое число: "))
 for i in range(count):
-    spis[i] = randint(0, 100)
+    spis.append(randint(0, 10))
 print(spis)
+numbers = 0
+for i in range(len(spis)):
+    if i == num:
+        numbers+=1
+print("Количество элементов", num, "=", numbers)
