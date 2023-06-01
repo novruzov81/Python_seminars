@@ -10,3 +10,15 @@
 #     6
 #     -> 5
 
+from random import randint
+spis = list()
+count = int(input("Введите количество элементов: "))
+for i in range(count):
+    spis.append(randint(1, 10))
+print(spis)
+num = int(input("Введите искомое число: "))
+temp = spis[0]
+for i in range(count):
+    if abs(spis[i] -count) < abs(temp - count):
+        temp = spis[i]
+print("Самый близкий к заданному числу элемент - ", temp)
