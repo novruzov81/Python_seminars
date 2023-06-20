@@ -1,4 +1,4 @@
-from view import menu, show_contacts, print_message, input_contact
+from view import menu, show_contacts, print_message, input_contact, input_return
 import model
 from view import text
 
@@ -18,11 +18,17 @@ def start():
                 model.add_contact(new)
                 print_message(text.contact_saved(new.get('name')))
             case 5:
-                pass
+                word = input_search(text.search_word)
+                result = model.search(word)
+                show_contacts(result)
             case 6:
-                pass
+                word = input_search(text.search_word)
+                result = model.search(word)
+                show_contacts(result)
+                index = input_return(text.input_index)
+                new = input_contact(text.input_change_contact)
             case 7:
                 pass
             case 8:
                 pass
-        break
+

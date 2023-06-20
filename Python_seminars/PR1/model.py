@@ -21,3 +21,13 @@ def check_id():
 def add_contact(new: dict):
     new.update(check_id())
     phone_book.append(new)
+
+
+def search(word: str) -> list[dict]:
+    result = []
+    for contact in phone_book:
+        for key, value in contact.items():
+            if word.lower() in value.lower():
+                result.append(contact)
+                break
+    return result
