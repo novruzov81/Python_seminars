@@ -1,5 +1,6 @@
-from view import menu
+from view import menu, show_contacts, print_message, input_contact
 import model
+from view import text
 
 def start():
     while True:
@@ -7,12 +8,15 @@ def start():
         match choice:
             case 1:
                 model.open_file()
+                print_message(text.open_succesfull)
             case 2:
                 pass
             case 3:
-                pass
+                show_contacts(model.phone_book)
             case 4:
-                pass
+                new = input_contact(text.input_new_contact)
+                model.add_contact(new)
+                print_message(text.contact_saved(new.get('name')))
             case 5:
                 pass
             case 6:
@@ -20,4 +24,5 @@ def start():
             case 7:
                 pass
             case 8:
-                break
+                pass
+        break
