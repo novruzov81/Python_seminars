@@ -31,3 +31,14 @@ def search(word: str) -> list[dict]:
                 result.append(contact)
                 break
     return result
+
+
+def change(index: int, new: dict[str, str]):
+    for key, field in new.items():
+        if field != '':
+            phone_book[index-1][key] = field
+
+
+def delete_contact(delete: dict):
+    delete.update(check_id())
+    phone_book.append(delete)

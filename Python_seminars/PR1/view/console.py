@@ -42,3 +42,8 @@ def input_contact(message: str) -> dict[str, str]:
 def input_return(message: str) -> str:
     print()
     return input(message)
+
+
+def delete_contact(message:str) -> dict[str, str]:
+    print(message)
+    name = input('Введите имя контакта: ')
